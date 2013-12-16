@@ -1,0 +1,19 @@
+.article p{
+    display: inline;
+}
+.article{
+    padding-top: 0.4rem;
+}
+.pagination-centered{
+    margin-top: 0.8rem;
+}
+footer a{
+    text-transform: lowercase;
+}
+code{
+    color: inherit;
+}
+pre{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}

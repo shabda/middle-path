@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+        <title>
+        {% block title %}
+            {{ SITENAME }}
+        {% endblock %}
+        </title>
+
+        {% block head %}
+            {% include "_feeds.html" %}
+        {% endblock head %}
+
+        {% block media %}
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/foundation.css">
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pelican.css">
+        {% endblock %}
+</head>
+
+<body id="index" class="home">
+    <div class="row">
+        <div class="columns large-10 large-offset-1">
+
+            <div class="row">
+                <header id="banner" class="body">
+                    <div class="large-12 columns text-center">
+                        <h1><a href="{{ SITEURL or "/" }}">{{ SITENAME }}</a></h1>
+                        <h2 class="subheader">{{ SITESUBTITLE }}</h2>
+                    </div>
+                </header>
+            </div>
+
+            <div class="row">
+                <div class="large-10 large-offset-1 columns">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+
+            {% include "_footer.html" %}
+        <div class="columns large-1">&nbsp</div>
+    </div>
+
+</body>
+</html>

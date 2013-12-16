@@ -1,0 +1,25 @@
+<hr />
+<div class="row">
+    <div class="large-12 columns text-center">
+        <footer>
+            I write about
+            {% for cat, null in categories %}
+                <a href="{{ SITEURL }}/{{ cat.url }}"> {{ cat }}</a>{% if (loop.index + 1) == loop.length %} &{% elif not loop.last %} ,{% endif %}{% endfor %}.
+            Say hi to me at
+            {% for text, link in SOCIAL  %}
+                <a href="{{ link }}"> {{ text }}</a>{% if (loop.index + 1) == loop.length %} &{% elif not loop.last %} ,{% endif %}{% endfor %}.
+        </footer>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns text-center">
+        <footer id="contentinfo" class="body">
+            Powered by <a href="http://getpelican.com/">Pelican</a>
+            and <a href="http://python.org">Python</a>.
+        </footer>
+
+    </div>
+</div>
+</div>
